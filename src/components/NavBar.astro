@@ -1,23 +1,43 @@
 ---
+import cv from "@/lib/my-portfolio.json";
+
 const NAV_MENU = [
   { label: "Home", path: "#" },
   { label: "Skills", path: "#skills" },
   { label: "Education", path: "#education" },
 ];
+
+const { basics } = cv;
 ---
 
 <header
-  class="w-full fixed m-auto top-0 z-10 py-5 flex justify-center items-center"
+  class="w-full gap-5 place-items-center grid grid-cols-3 grid-row-2 fixed m-auto top-0 z-10 p-5"
 >
-  <nav class="bg-gray-400 text-white text-balance rounded-xl w-200 py-1 px-4">
-    <ul class="flex flex-row gap-6 text-[0.8rem]">
-      {
-        NAV_MENU.map((menu) => (
-          <li class="cursor-pointer hover:scale-105 hover:opacity-90 transition-all">
-            <a href={menu.path}>{menu.label}</a>
-          </li>
-        ))
-      }
-    </ul>
-  </nav>
+  <h1 class="text-balance font-semibold md:text-lg text-sm">
+    {basics.name}
+    <span class="text-orange-400">{basics.surname}</span>
+  </h1>
+  <ul
+    class="bg-[rgba(0,0,0,.75)] w-200 py-1 px-4 rounded-xl flex flex-row gap-6 text-[0.8rem] md:col-start-2 col-start-3"
+  >
+    {
+      NAV_MENU.map((menu) => (
+        <li class="text-white text-balance cursor-pointer hover:scale-105 hover:opacity-90 transition-all">
+          <a href={menu.path}>{menu.label}</a>
+        </li>
+      ))
+    }
+  </ul>
+
+  <ul
+    class="bg-[rgba(0,0,0,.75)] w-200 py-1 px-4 rounded-xl flex flex-row gap-6 text-[0.8rem]"
+  >
+    {
+      basics.profiles.map((profile) => (
+        <li class="text-white text-balance cursor-pointer hover:scale-105 hover:opacity-90 transition-all">
+          <a href={profile.url} target="_blank" title={profile.url} />
+        </li>
+      ))
+    }
+  </ul>
 </header>

@@ -1,6 +1,7 @@
 {
   "basics": {
-    "name": "Bernardo Alfaro Rojas",
+    "name": "Bernardo",
+    "surname": "Alfaro",
     "label": "Frontend Engineer",
     "image": "",
     "email": "bernardo.alfaro.rojas@gmail.com",
@@ -14,11 +15,20 @@
       "countryCode": "CL",
       "region": "Coquimbo"
     },
-    "profiles": [{
+    "profiles": [
+      {
       "network": "LinkedIn",
-      "username": "john",
-      "url": "https://twitter.com/john"
-    }]
+      "username": "Bernardo Alfaro",
+      "url": "https://www.linkedin.com/in/bernardo-alfaro-r-3558ba168/",
+      "icon": "github-icon.svg"
+      },
+      {
+      "network": "Github",
+      "username": "BernardoAlfaro2",
+      "url": "https://github.com/BernardoAlfaro2",
+      "icon": "github-icon.svg"
+    }
+  ]
   },
   "work": [{
     "name": "Company",
