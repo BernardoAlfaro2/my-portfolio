@@ -47,8 +47,8 @@
   {
       "title": "ANS - Asociación Nacional de Servicios",
       "position": "Software Engineer",
-      "startDate": "(Actualidad)",
-      "endDate": "",
+      "startDate": "",
+      "endDate": "(Actualidad)",
       "description":[
         "Desarrollo y mantenimiento de aplicaciones web utilizando el framework Vue.js.",
         "Implementación de técnicas de Micro Frontend para mejorar la modularidad y escalabilidad del código.",

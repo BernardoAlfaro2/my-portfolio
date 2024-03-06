@@ -10,7 +10,6 @@ const { projects } = Astro.props as Props;
 
 <section id="projects" class="mb-10">
   <Title title="Proyectos" />
-
   <div
     class="w-full flex flex-row gap-4 flex-wrap justify-center items-center mt-5"
   >
@@ -26,6 +25,7 @@ const { projects } = Astro.props as Props;
               <div class="relative w-full  overflow-hidden">
                 <img
                   src={projectImg}
+                  loading="lazy"
                   class="rounded-tl-md rounded-tr-md"
                   alt={projectImg}
                 />
