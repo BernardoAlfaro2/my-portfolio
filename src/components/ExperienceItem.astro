@@ -1,0 +1,34 @@
+---
+interface Props {
+  description: Array<string>;
+  title: string;
+  startDate: string;
+  endDate: string;
+  position?: string;
+}
+
+const { description, title, endDate, startDate, position } =
+  Astro.props as Props;
+
+function separator() {
+  return endDate ? " - " : "";
+}
+---
+
+<div class="flex flex-col">
+  <div class="flex justify-between items-center">
+    <div class="flex justify-start flex-col">
+      <span class="text-lg text-white">{title}</span>
+      <span class="text-orange-400 text-xs text-balance">{position}</span>
+    </div>
+
+    <span class="text-white text-md">
+      {startDate}
+      {separator()}
+      {endDate}
+    </span>
+  </div>
+  <ul class="text-white/70 text-[0.8rem] text-justify max-w-[70ch] mt-2">
+    {description.map((desc) => <li class="my-1">- {desc}</li>)}
+  </ul>
+</div>

@@ -1,1 +1,23 @@
-<h1>Skills</h1>
+---
+import Title from "./Title.astro";
+
+interface Props {
+  skills: Array<string>;
+}
+
+const { skills } = Astro.props as Props;
+---
+
+<section id="skills" class="mb-10">
+  <Title title="Skills" />
+
+  <div class="flex gap-3 flex-row flex-wrap mt-5 max-w-[900px]">
+    {
+      skills.map((s) => (
+        <div class="bg-[#3c1e8d7e] shadow-md text-white px-4 py-1 text-center rounded-xl">
+          <span class="text-xs">{s}</span>
+        </div>
+      ))
+    }
+  </div>
+</section>

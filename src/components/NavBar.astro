@@ -9,18 +9,24 @@ const NAV_MENU = [
   { label: "Home", path: "#" },
   { label: "Skills", path: "#skills" },
   { label: "Education", path: "#education" },
+  { label: "Projects", path: "#projects" },
 ];
+
+const ICONS_NAV: Record<string, any> = {
+  GithubIcon,
+  LinkedInIcon,
+};
 ---
 
 <header
-  class="w-full gap-5 place-items-center grid grid-cols-3 grid-row-2 fixed m-auto top-0 z-10 p-5"
+  class="w-full gap-5 bg-gradient-to-b from-[#3c1e8dc9] to-black/20 place-items-center grid grid-cols-3 grid-row-2 sticky left-0 top-0 z-10 p-5 h-50"
 >
   <div class="flex items-center flex-col">
-    <h1 class="text-balance font-semibold md:text-lg text-sm">
+    <h1 class="text-balance font-semibold md:text-lg text-sm text-white">
       {basics.name}
       <span class="text-orange-400">{basics.surname}</span>
     </h1>
-    <h2 class="text-balance text-xs opacity-90">
+    <h2 class="text-center text-xs opacity-90 text-white">
       {basics.location.region}, {basics.location.city} - {
         basics.location.address
       }
@@ -28,7 +34,7 @@ const NAV_MENU = [
   </div>
 
   <ul
-    class="bg-[rgba(0,0,0,.75)] w-200 py-1 px-4 rounded-xl flex flex-row gap-6 text-[0.8rem] md:col-start-2 col-start-3"
+    class="bg-[rgba(0,0,0,.75)] border-white/30 border-[1px] w-200 py-1 px-4 rounded-xl flex flex-row gap-6 text-[0.8rem] md:col-start-2 col-start-3"
   >
     {
       NAV_MENU.map((menu) => (
@@ -40,29 +46,25 @@ const NAV_MENU = [
   </ul>
 
   <ul
-    class="bg-[rgba(0,0,0,.75)] w-200 py-1 px-4 rounded-xl flex flex-row gap-6 text-[0.8rem]"
+    class="bg-[rgba(0,0,0,.75)] border-white/30 border-[1px] w-200 py-1 px-4 rounded-xl flex flex-row gap-6 text-[0.8rem]"
   >
-    <li
-      class="text-white text-balance cursor-pointer hover:scale-105 hover:opacity-90 transition-all"
-    >
-      <a
-        href="https://github.com/BernardoAlfaro2"
-        target="_blank"
-        title="Github"
-      >
-        <GithubIcon />
-      </a>
-    </li>
-    <li
-      class="text-white text-balance cursor-pointer hover:scale-105 hover:opacity-90 transition-all"
-    >
-      <a
-        href="https://www.linkedin.com/in/bernardo-alfaro-r-3558ba168/"
-        target="_blank"
-        title="LinkedIn"
-      >
-        <LinkedInIcon />
-      </a>
-    </li>
+    {
+      basics.profiles.map((profile) => {
+        const Icon = ICONS_NAV[profile.icon];
+        return (
+          <li>
+            <a
+              class="text-white"
+              href={profile.url}
+              rel="noopener noreferrer"
+              target="_blank"
+              title={profile.network}
+            >
+              <Icon />
+            </a>
+          </li>
+        );
+      })
+    }
   </ul>
 </header>

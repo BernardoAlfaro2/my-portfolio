@@ -20,38 +20,47 @@
       "network": "LinkedIn",
       "username": "Bernardo Alfaro",
       "url": "https://www.linkedin.com/in/bernardo-alfaro-r-3558ba168/",
-      "icon": "GithubIcon.astro"
+      "icon": "LinkedInIcon"
       },
       {
       "network": "Github",
       "username": "BernardoAlfaro2",
       "url": "https://github.com/BernardoAlfaro2",
-      "icon": "github-icon.svg"
+      "icon": "GithubIcon"
     }
   ]
   },
-  "work": [{
-    "name": "Company",
-    "position": "President",
-    "url": "https://company.com",
-    "startDate": "2013-01-01",
-    "endDate": "2014-01-01",
-    "summary": "Description…",
-    "highlights": [
-      "Started the company"
-    ]
-  }],
-  "volunteer": [{
-    "organization": "Organization",
-    "position": "Volunteer",
-    "url": "https://organization.com/",
-    "startDate": "2012-01-01",
-    "endDate": "2013-01-01",
-    "summary": "Description…",
-    "highlights": [
-      "Awarded 'Volunteer of the Month'"
-    ]
-  }],
+  "work": [
+    {
+      "title": "Repuestos Miranda",
+      "position": "Frontend Developer JR, TI Support",
+      "startDate": "01/04/2019",
+      "endDate": "01/08/2021",
+      "description":[
+        "Contribución al desarrollo de sistema POS basado en Vue.js.",
+        "Participación en la creación y mantenimiento de interfaces de usuario atractivas y responsivas.",
+        "Adquisición de conocimientos básicos en Docker para facilitar el desarrollo y despliegue eficiente de aplicaciones.",
+        "Diseño de interfaz de usuario utilizando Bootstrap.",
+        "Participación en el diseño de arquitectura de software sobre un ERP."    
+      ]
+  },
+  {
+      "title": "ANS - Asociación Nacional de Servicios",
+      "position": "Software Engineer",
+      "startDate": "(Actualidad)",
+      "endDate": "",
+      "description":[
+        "Desarrollo y mantenimiento de aplicaciones web utilizando el framework Vue.js.",
+        "Implementación de técnicas de Micro Frontend para mejorar la modularidad y escalabilidad del código.",
+        "Integración de pruebas unitarias utilizando Jest para garantizar la calidad del código",
+        "Trabajo en estrecha colaboración con el equipo de Back End para optimizar la comunicación entre Front End y Back End.",
+        "Participación en la implementación de contenedores Docker para facilitar el despliegue y la gestión de aplicaciones sobre Azure Kubernetes Service.",
+        "Implementación de mecanismos para el tracking de la aplicación (Google Tag Manager, HotJar, entre otros).",
+        "Colaboración con el equipo de UX/UI para la implementación de la interfaz de usuario (Figma).",    
+        "Participación en ceremonias SCRUM como desarrollador y estimador."  
+      ]
+  }
+],  
   "education": [{
     "institution": "University",
     "url": "https://institution.com/",
@@ -64,34 +73,8 @@
       "DB1101 - Basic SQL"
     ]
   }],
-  "awards": [{
-    "title": "Award",
-    "date": "2014-11-01",
-    "awarder": "Company",
-    "summary": "There is no spoon."
-  }],
-  "certificates": [{
-    "name": "Certificate",
-    "date": "2021-11-07",
-    "issuer": "Company",
-    "url": "https://certificate.com"
-  }],
-  "publications": [{
-    "name": "Publication",
-    "publisher": "Company",
-    "releaseDate": "2014-10-01",
-    "url": "https://publication.com",
-    "summary": "Description…"
-  }],
-  "skills": [{
-    "name": "Web Development",
-    "level": "Master",
-    "keywords": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ]
-  }],
+  "skills": ["Vue 3", "Quasar", "Nuxt.js", "Astro Build", "JavaScript", "HTML"
+  , "CSS", "PrimeVue", "Vuetify", "Sass", "Tailwind", "Module Federation", "WindiCSS", "Docker", "Pinia", "Vite", "Vue Router", "Bootstrap"],
   "languages": [{
     "language": "English",
     "fluency": "Native speaker"
@@ -107,14 +90,43 @@
     "name": "Jane Doe",
     "reference": "Reference…"
   }],
-  "projects": [{
-    "name": "Project",
+  "projects": [
+    {
+    "name": "Payday",
     "startDate": "2019-01-01",
     "endDate": "2021-01-01",
-    "description": "Description...",
-    "highlights": [
-      "Won award at AIHacks 2016"
+    "description": "Plataforma de solución integral al servicio de minimarkets, almacenes entre otros.",
+    "projectImg": "/payday.webp",
+    "inProgress": true,
+    "technologies": [
+      "Vue 3", "CSS","Javascript", "Pinia", "Auth0", "Module Federation",
+      "Typescript"
     ],
-    "url": "https://project.com/"
-  }]
+    "url": "https://portal.payday.cl"
+  },
+  {
+    "name": "ANS",
+    "startDate": "2019-01-01",
+    "endDate": "2021-01-01",
+    "description": "Plataforma de solución integral al servicio de los corredores de seguros.",
+    "projectImg": "/ans.webp",
+    "inProgress": false,
+    "technologies": [
+      "Vue 3","Typescript", "CSS","Javascript", "Pinia", "Sass", "Vuetify", "Router"
+    ],
+    "url": "https://ant.cl/portal/account/login"
+  },
+  {
+    "name": "My Portfolio",
+    "startDate": "2019-01-01",
+    "endDate": "2021-01-01",
+    "description": "Web personal, que incluye información sobre mi experiencia laboral.",
+    "projectImg": "/my-portfolio.webp",
+    "inProgress": true,
+    "technologies": [
+      "Astro","Typescript", "JSON", "Taildwind", "CSS","Javascript", "SSR"
+    ],
+    "url": "#"
+  }
+]
 }

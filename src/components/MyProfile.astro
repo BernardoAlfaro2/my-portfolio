@@ -1,0 +1,25 @@
+---
+import cv from "@/lib/my-portfolio.json";
+
+const { basics } = cv;
+---
+
+<section>
+  <div class="h-auto mb-10" id="#">
+    <div class="flex items-center justify-center gap-[15rem]">
+      <h1 class="text-3xl text-balance font-semibold text-white">
+        Hello! 🖐️, I'm {basics.name}
+        <span class="text-orange-400">{basics.surname}</span>
+      </h1>
+    </div>
+    <p class="max-w-[70ch] text-white/70 text-justify mt-3">
+      I am a highly proactive professional with a solid track record in dynamic
+      work environments. My results-oriented approach is reflected in how I
+      tackle challenges, always seeking opportunities to improve efficiencies
+      and exceed goals. I excel in teamwork, effectively collaborating, actively
+      listening, and contributing with innovative ideas. My commitment to
+      excellence and adaptability enables me to stand out both in individual
+      projects and collaborative initiatives.
+    </p>
+  </div>
+</section>

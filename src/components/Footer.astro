@@ -1,0 +1,37 @@
+---
+interface Props {
+  mail: string;
+}
+
+const { mail } = Astro.props;
+---
+
+<footer
+  class="bg-black/50 w-full m-3 rounded-lg max-w-[100rem] dark:bg-gray-800"
+>
+  <div
+    class="w-full text-white mx-auto max-w-screen p-4 md:flex md:items-center md:justify-between"
+  >
+    <span class="text-sm sm:text-center dark:text-gray-400"
+      >© 2023 <a href="#" class="hover:underline">Bernardo Alfaro</a>. All
+      Rights Reserved.
+    </span>
+    <ul
+      class="flex flex-wrap items-center mt-3 text-[0.8rem] font-medium sm:mt-0"
+    >
+      <li>
+        <a href="#" class="hover:underline me-4 md:me-6">Skills</a>
+      </li>
+      <li>
+        <a href="#" class="hover:underline me-4 md:me-6">Education</a>
+      </li>
+      <li>
+        <a
+          href={`mailto:${mail}`}
+          title={`Enviar email a ${mail}`}
+          class="hover:underline">Contact</a
+        >
+      </li>
+    </ul>
+  </div>
+</footer>

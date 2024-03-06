@@ -1,0 +1,63 @@
+---
+import Title from "./Title.astro";
+
+interface Props {
+  projects: Array<Record<string, any>>;
+}
+
+const { projects } = Astro.props as Props;
+---
+
+<section id="projects" class="mb-10">
+  <Title title="Mis Proyectos" />
+
+  <div
+    class="w-full flex flex-row gap-4 flex-wrap justify-center items-center mt-5"
+  >
+    {
+      projects.map(
+        ({ name, description, url, projectImg, technologies, inProgress }) => {
+          return (
+            <a
+              href={url}
+              target="_blank"
+              class="rounded-md shadow-sm hover:scale-105 transition-transform bg-gradient-to-b from-[#3c1e8d38]  to-transparent max-w-[18rem]"
+            >
+              <div class="relative w-full  overflow-hidden">
+                <img
+                  src={projectImg}
+                  class="rounded-tl-md rounded-tr-md"
+                  alt={projectImg}
+                />
+                {inProgress && (
+                  <div class="bg-green-500/80 flex justify-center p-1 text-xs absolute top-0 left-0 text-center text-white rounded-br-md">
+                    Working in progress
+                  </div>
+                )}
+              </div>
+
+              <div class="p-3 text-xl">
+                <span class="text-white">{name}</span>
+                <p class="text-white/70 text-xs text-justify font-normal max-w-[50ch]">
+                  {description}
+                </p>
+                <span class="text-white/70 text-xs underline">
+                  Technologies
+                </span>
+                <div class="flex gap-2 flex-wrap flex-row mt-2">
+                  {technologies.map((tech: string) => {
+                    return (
+                      <div class="bg-[#3c1e8d7e] m-0 px-3 text-[.7rem] text-center rounded-xl text-white">
+                        {tech}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </a>
+          );
+        }
+      )
+    }
+  </div>
+</section>
