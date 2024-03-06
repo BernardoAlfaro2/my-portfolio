@@ -9,7 +9,7 @@ const { projects } = Astro.props as Props;
 ---
 
 <section id="projects" class="mb-10">
-  <Title title="Mis Proyectos" />
+  <Title title="Proyectos" />
 
   <div
     class="w-full flex flex-row gap-4 flex-wrap justify-center items-center mt-5"
@@ -30,8 +30,8 @@ const { projects } = Astro.props as Props;
                   alt={projectImg}
                 />
                 {inProgress && (
-                  <div class="bg-green-500/80 flex justify-center p-1 text-xs absolute top-0 left-0 text-center text-white rounded-br-md">
-                    Working in progress
+                  <div class="bg-green-600/90 flex justify-center p-1 text-xs absolute top-0 left-0 text-center text-white rounded-br-md">
+                    En progreso
                   </div>
                 )}
               </div>
