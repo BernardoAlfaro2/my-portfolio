@@ -11,20 +11,17 @@ const { works } = Astro.props as Props;
 
 <section id="education" class="mb-10">
   <Title title="Experiencias Laborales" />
-  <div class="mt-5">
-    {
-      works.map((work) => (
-        <>
-          <ExperienceItem
-            position={work.position}
-            title={work.title}
-            description={work.description}
-            endDate={work.endDate}
-            startDate={work.startDate}
-          />
-          <br />
-        </>
-      ))
-    }
-  </div>
+  {
+    works.map((work) => (
+      <>
+        <ExperienceItem
+          position={work.position}
+          title={work.title}
+          description={work.description}
+          endDate={work.endDate}
+          startDate={work.startDate}
+        />
+      </>
+    ))
+  }
 </section>
