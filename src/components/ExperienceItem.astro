@@ -11,7 +11,7 @@ const { description, title, endDate, startDate, position } =
   Astro.props as Props;
 
 function separator() {
-  return endDate ? " - " : "";
+  return endDate && startDate ? " - " : "";
 }
 ---
 
@@ -22,7 +22,7 @@ function separator() {
       <span class="text-orange-400 text-sm text-balance">{position}</span>
     </div>
 
-    <span class="text-white text-md">
+    <span class="text-white/80 text-md flex flex-wrap">
       {startDate}
       {separator()}
       {endDate}

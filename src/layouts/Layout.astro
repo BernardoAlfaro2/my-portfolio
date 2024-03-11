@@ -6,6 +6,7 @@ interface Props {
 const { title } = Astro.props;
 
 import NavBar from "../components/NavBar.astro";
+import IBelickBg from "../components/IBelickBg.astro";
 ---
 
 <!doctype html>
@@ -25,36 +26,33 @@ import NavBar from "../components/NavBar.astro";
     <title>{title}</title>
   </head>
   <body class="relative">
-    <div
-      class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"
-    >
-    </div>
-  </body>
-  <NavBar />
-  <slot />
-  <style is:global>
-    html {
-      font-family: Poppins, sans-serif;
-      background: #fff;
-      scroll-behavior: smooth;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
+    <IBelickBg />
+    <NavBar />
+    <slot />
+    <style is:global>
       html {
-        scroll-behavior: auto;
+        font-family: Poppins, sans-serif;
+        background: #fff;
+        scroll-behavior: smooth;
       }
-    }
 
-    body {
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-    }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
 
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
-  </style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+    </style>
+  </body>
 </html>

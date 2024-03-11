@@ -1,12 +1,13 @@
 ---
 interface Props {
   title: string;
+  class?: string;
 }
 
-const { title } = Astro.props as Props;
+const { title, class: _class } = Astro.props as Props;
 ---
 
-<h1 class="text-center font-semibold text-2xl text-white">
+<h1 class:list={_class} class="text-center font-semibold text-2xl text-white">
   <span class="text-orange-400">Mis</span>
   {title}<span class="text-orange-400">.</span>
 </h1>
